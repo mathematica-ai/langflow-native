@@ -1,0 +1,36 @@
+{
+  "name": "@langflow-native/components",
+  "version": "0.1.0",
+  "description": "Built-in components for Langflow Native workflows",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rm -rf dist *.tsbuildinfo",
+    "test": "jest",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts"
+  },
+  "keywords": [
+    "langflow",
+    "components",
+    "ai",
+    "llm"
+  ],
+  "author": "Langflow Native Contributors",
+  "license": "MIT",
+  "dependencies": {
+    "@langflow-native/core": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.3.0"
+  }
+}
+

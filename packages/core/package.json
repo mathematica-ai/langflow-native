@@ -1,0 +1,34 @@
+{
+  "name": "@langflow-native/core",
+  "version": "0.1.0",
+  "description": "Core abstractions for Langflow Native framework",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rm -rf dist *.tsbuildinfo",
+    "test": "jest",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts"
+  },
+  "keywords": [
+    "langflow",
+    "workflow",
+    "graph",
+    "ai"
+  ],
+  "author": "Langflow Native Contributors",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {}
+}
+

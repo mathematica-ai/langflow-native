@@ -1,0 +1,31 @@
+{
+  "name": "chat-with-history-example",
+  "version": "0.1.0",
+  "description": "Chat workflow with session history using Langflow Native",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "langflow",
+    "example",
+    "chat",
+    "session"
+  ],
+  "author": "Langflow Native Contributors",
+  "license": "MIT",
+  "dependencies": {
+    "@langflow-native/core": "^0.1.0",
+    "@langflow-native/runtime": "^0.1.0",
+    "@langflow-native/components": "^0.1.0",
+    "@langflow-native/services": "^0.1.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.0",
+    "typescript": "^5.3.0"
+  }
+}
+

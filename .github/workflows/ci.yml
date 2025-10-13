@@ -1,0 +1,71 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'yarn'
+      
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      
+      - name: Lint
+        run: yarn lint
+      
+      - name: Type check
+        run: yarn typecheck
+      
+      - name: Build
+        run: yarn build
+      
+      - name: Test
+        run: yarn test --coverage
+      
+      - name: Upload coverage
+        uses: codecov/codecov-action@v3
+        if: matrix.node-version == '18.x'
+        with:
+          files: ./coverage/lcov.info
+          flags: unittests
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+          cache: 'yarn'
+      
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      
+      - name: Build all packages
+        run: yarn build
+      
+      - name: Check package sizes
+        run: |
+          du -sh packages/*/dist
+

@@ -247,7 +247,7 @@ MIT License - see [LICENSE](./LICENSE)
 
 ## Community
 
-- **GitHub**: [github.com/your-org/langflow-native](https://github.com/your-org/langflow-native)
+- **GitHub**: [github.com/mathematica-ai/langflow-native](https://github.com/mathematica-ai/langflow-native)
 - **Discord**: Coming soon
 - **Twitter**: Coming soon
 
@@ -262,8 +262,3 @@ MIT License - see [LICENSE](./LICENSE)
 - 📖 [Documentation](./docs)
 - 💬 [GitHub Discussions](https://github.com/your-org/langflow-native/discussions)
 - 🐛 [Issue Tracker](https://github.com/your-org/langflow-native/issues)
-
----
-
-Built with ❤️ by the Langflow Native community. Join us in bringing AI workflows to mobile!
-
